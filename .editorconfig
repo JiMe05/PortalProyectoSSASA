@@ -1,0 +1,17 @@
+# Editor configuration, see https://editorconfig.org
+root = true  # Indica que este es el archivo de configuración principal y que los editores deben ignorar cualquier archivo .editorconfig en directorios superiores.
+
+[*]  # Aplica las siguientes configuraciones a todos los archivos en el proyecto.
+charset = utf-8  # Especifica que todos los archivos deben utilizar la codificación UTF-8.
+indent_style = space  # Define que se debe utilizar espacios en lugar de tabulaciones para la indentación.
+indent_size = 2  # Establece que el tamaño de la indentación debe ser de 2 espacios.
+insert_final_newline = true  # Indica que se debe agregar una nueva línea al final de cada archivo.
+trim_trailing_whitespace = true  # Establece que se deben eliminar los espacios en blanco al final de cada línea.
+
+[*.ts]  # Aplica configuraciones específicas para archivos TypeScript.
+quote_type = single  # Define que se deben utilizar comillas simples en lugar de comillas dobles para las cadenas de texto.
+ij_typescript_use_double_quotes = false  # Indica que en TypeScript no se deben usar comillas dobles, compatible con algunos editores como IntelliJ IDEA.
+
+[*.md]  # Aplica configuraciones específicas para archivos Markdown.
+max_line_length = off  # Indica que no hay límite en la longitud de las líneas.
+trim_trailing_whitespace = false  # Establece que no se deben eliminar los espacios en blanco al final de las líneas en archivos Markdown, permitiendo que se mantenga el formato visual.

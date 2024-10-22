@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantillas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<section class="bg-white dark:bg-gray-900">
+    <a href="#">
+        <!-- Enlace al logo que redirige a la página de inicio -->
+        <img src="Precredit.png" alt="Logo" style="position: absolute; top: 10px; left: 10px; width: 200px;">
+        <!-- Imagen del logo con posición absoluta en la parte superior izquierda -->
+    </a>
+    <div class="absolute top-0 right-0 mt-4 mr-4">
+        <!-- Contenedor para el botón de regresar, posicionado en la parte superior derecha -->
+        <button (click)="redirigir()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+            <!-- Botón que, al hacer clic, ejecuta la función redirigir() -->
+            <svg class="w-6 h-6 text-blue-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <!-- Icono SVG que representa una flecha de regreso -->
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+            </svg>
+            Regresar
+        </button>
+    </div>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+        <!-- Sección principal que contiene el título y la descripción -->
+        <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+            <!-- Contenedor centrado para el título y descripción -->
+            <h2 class="mb-4 text-4xl tracking-tight font-normal text-gray-900 dark:text-white">Plantillas</h2>
+            <!-- Título de la sección -->
+            <p align="justify" class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
+                <!-- Descripción de las plantillas disponibles -->
+                En este apartado encontrarás plantillas en Word, Excel, PowerPoint y Canva, diseñadas para facilitar distintos procesos dentro de la empresa. Elige la que mejor se adapte a tus necesidades.
+            </p>
+        </div> 
+        <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 ">
+            <!-- Contenedor para las tarjetas de plantillas organizadas en una cuadrícula -->
+            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                <!-- Tarjeta para la plantilla de Word -->
+                <a href="#">
+                    <img style="width: 600px; height: 200px;" class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="Icono de wor.png" alt="Imagen de Word">
+                    <!-- Imagen de la plantilla de Word -->
+                </a>                
+                <div class="p-5">
+                    <!-- Contenedor para el texto de la tarjeta -->
+                    <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <a href="#">Word</a>
+                        <!-- Título de la plantilla, que es un enlace -->
+                    </h3>
+                    <p align="justify" class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                        <!-- Descripción de la plantilla de Word -->
+                        En este apartado, se incluye una plantilla de Word que puedes utilizar para facilitar la organización de tus documentos y optimizar tu trabajo.
+                    </p>   
+                </div>
+                <a href="https://drive.google.com/drive/folders/1zcHWZFkmLSE6H57XYm5P7nvRkG09tqMp?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <button style="width: 50px; height: 30px;" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                        Ir
+                        <!-- Botón para acceder a la plantilla de Word -->
+                    </button>
+                </a>
+                
+            </div> 
+            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                <!-- Tarjeta para la plantilla de Excel -->
+                <a href="#">
+                    <img style="width: 600px; height: 150px;" class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="Icono de excel.png" alt="Imagen de Excel">
+                    <!-- Imagen de la plantilla de Excel -->
+                </a>
+                <div class="p-5">
+                    <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"> 
+                        <a href="#">Excel</a>
+                        <!-- Título de la plantilla, que es un enlace -->
+                    </h3>
+                    <p align="justify" class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                        <!-- Descripción de la plantilla de Excel -->
+                        En este apartado, se incluye una plantilla de Excel que puedes utilizar para facilitar la organización de tus documentos y optimizar tu trabajo.
+                    </p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1Z_lChPMeEO9ERQCjyYR-ekqiihb4cBUO?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <button style="width: 50px; height: 30px;" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                        Ir
+                        <!-- Botón para acceder a la plantilla de Word -->
+                    </button>
+                </a>
+                
+            </div> 
+            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                <!-- Tarjeta para la plantilla de PowerPoint -->
+                <a href="#">
+                    <img style="width: 600px; height: 150px;" class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="Icono de Power.png" alt="Imagen de PowerPoint">
+                    <!-- Imagen de la plantilla de PowerPoint -->
+                </a>
+                <div class="p-5">
+                    <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <a href="#">PowerPoint</a>
+                        <!-- Título de la plantilla, que es un enlace -->
+                    </h3>
+                    <p align="justify" class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                        <!-- Descripción de la plantilla de PowerPoint -->
+                        En este apartado, se incluye una plantilla de PowerPoint que puedes utilizar para facilitar la organización de tus documentos y optimizar tu trabajo.
+                    </p>
+                </div>
+                <button style="width: 50px; height: 30px;" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                    Ir
+                    <!-- Botón para acceder a la plantilla de PowerPoint -->
+                </button>
+            </div> 
+            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                <!-- Tarjeta para la plantilla de Canva -->
+                <a href="#">
+                    <img style="width: 600px; height: 200px;" class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="Icono de Powerbi.png" alt="Imagen de Canva">
+                    <!-- Imagen de la plantilla de Canva -->
+                </a>
+                <div class="p-5">
+                    <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <a href="#">Power Bi</a>
+                        <!-- Título de la plantilla, que es un enlace -->
+                    </h3>
+                    <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                        <!-- Descripción de la plantilla de Canva -->
+                        En este apartado, se incluye una plantilla de Power Bi que puedes utilizar para facilitar la organización de tus documentos y optimizar tu trabajo.
+                    </p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1PMQAMSYo24BwcXHPSGOJPxs9G6tUQB8q?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <button style="width: 50px; height: 30px;" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                        Ir
+                        <!-- Botón para acceder a la plantilla de Word -->
+                    </button>
+                </a>
+                
+            </div> 
+        </div>
+    </div>
+</section>
+</body>
+</html>
