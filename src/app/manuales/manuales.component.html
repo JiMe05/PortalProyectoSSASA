@@ -3,130 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Plantillas</title>
+    <!-- Enlace a la hoja de estilos de Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para efectos de hover */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Desplazar hacia arriba al hacer hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra al hacer hover */
+        }
+    </style>
 </head>
-<body>
-<section class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900">
+<section class="min-h-screen p-8">
     <a href="#">
-        <!-- Enlace que redirige a la página de inicio -->
-        <img src="Precredit.png" alt="Logo" style="position: absolute; top: 10px; left: 10px; width: 200px;">
-        <!-- Imagen del logo con posición absoluta en la parte superior izquierda -->
+        <img src="Precredit.png" alt="Logo" class="absolute top-4 left-4 w-24 md:w-40"> <!-- Logo en la esquina superior izquierda -->
     </a>
-    <div class="absolute top-0 right-0 mt-4 mr-4">
-        <button (click)="redirigir()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-            <!-- Botón para redirigir al usuario a otra página -->
-            <svg class="w-6 h-6 text-blue-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <div class="absolute top-4 right-4">
+        <button (click)="redirigir()" type="button" class="text-blue-600 inline-flex items-center justify-center border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+            <!-- Icono de flecha y texto de regreso -->
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
-                <!-- Icono de flecha que indica regresar -->
             </svg>
             Regresar
         </button>
     </div>
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <!-- Contenedor principal con espaciado y alineación centrada -->
-        <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-normal text-gray-900 dark:text-white">Manuales</h2>
-            <!-- Título principal de la sección -->
-            <p align="justify" class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
-                <!-- Descripción de la sección de manuales -->
+    <br><br>
+    <div class="container mx-auto py-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-semibold text-gray-900 dark:text-white mb-4">Manuales</h2>
+            <p class="text-lg text-gray-500 dark:text-gray-400 text-justify"> <!-- Justificación del texto -->
                 En este apartado encontrarás manuales sobre los diferentes departamentos de la empresa, diseñados para guiar y optimizar sus procesos. Consulta el que necesites según el área correspondiente.
             </p>
         </div>
-        <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-            <!-- Contenedor para mostrar los manuales en forma de cuadrícula -->
-            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                <!-- Contenedor para el manual de PO -->
-                <a href="#">
-                    <img style="width: 800px; height: 200px;" class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="Icono de D PO.png" alt="Imagen de word">
-                    <!-- Imagen representativa del manual de PO -->
-                </a>
-                <div class="p-5">
-                    <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        <a href="#">Manual de PO</a>
-                        <!-- Título del manual de PO -->
-                    </h3>
-                    <p align="justify" class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                        <!-- Descripción del manual de PO -->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Tarjeta de Word -->
+            <div class="card flex flex-col bg-gray-50 rounded-lg shadow-lg dark:bg-gray-800">
+                <div class="flex justify-center">
+                    <img class="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none" src="Icono de D PO.png" alt="Imagen de Word" style="width: 200px; height: auto">
+                </div>
+                <div class="p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Manual de PO</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4 text-justify"> <!-- Justificación del texto -->
                         En este apartado encontrarás el manual del departamento de Product Owner (PO), diseñado para guiar y optimizar sus procesos. Consulta este recurso para comprender sus funciones y responsabilidades.
                     </p>
+                    <br><br>
+                    <a href="https://drive.google.com/drive/folders/1ioIY9VNGBXAz7kvzODUeHH9rkr6n_dLY?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="text-blue-600 inline-flex items-center justify-center border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                            Ingresar
+                        </button>
+                    </a>
                 </div>
-                 <!-- Botón para ingresar al Manual de PO -->
-                 <a href="https://drive.google.com/drive/folders/1ioIY9VNGBXAz7kvzODUeHH9rkr6n_dLY?usp=sharinghttps://drive.google.com/drive/folders/1ioIY9VNGBXAz7kvzODUeHH9rkr6n_dLY?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <button type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                        Ir 
-                    </button>
-                </a> 
             </div>
-            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                <!-- Contenedor para el manual de QA -->
-                <a href="#">
-                    <img style="width: 800px; height: 200px;" class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="Icono de D QA.png" alt="Imagen de excel">
-                    <!-- Imagen representativa del manual de QA -->
-                </a>
-                <div class="p-5">
-                    <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        <a href="#">Manual de QA</a>
-                        <!-- Título del manual de QA -->
-                    </h3>
-                    <p align="justify" class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                        <!-- Descripción del manual de QA -->
+
+            <!-- Tarjeta de Excel -->
+            <div class="card flex flex-col bg-gray-50 rounded-lg shadow-lg dark:bg-gray-800">
+                <div class="flex justify-center">
+                    <img class="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none" src="Icono de D QA.png" alt="Imagen de Excel" style="width: 200px; height: auto">
+                </div>
+                <div class="p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Manual de QA</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4 text-justify"> <!-- Justificación del texto -->
                         En este apartado encontrarás el manual del departamento de QA, enfocado en guiar y optimizar sus procesos. Consulta este recurso para comprender sus funciones y responsabilidades.
                     </p>
+                    <br><br><br>
+                    <a href="https://drive.google.com/drive/folders/1xKdLlbJToFNzFUn7leMQ8OpSfxj1XvbT?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="text-blue-600 inline-flex items-center justify-center border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                            Ingresar
+                        </button>
+                    </a>
                 </div>
-                <!-- Botón para ingresar al Manual de QA -->
-                <a href="https://drive.google.com/drive/folders/1xKdLlbJToFNzFUn7leMQ8OpSfxj1XvbT?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <button type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                        Ir 
-                    </button>
-                </a> 
             </div>
-            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                <!-- Contenedor para el manual de Scrum Master -->
-                <a href="#">
-                    <img style="width: 800px; height: 200px;" class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="Icono de D SCR.png" alt="Michael Avatar">
-                    <!-- Imagen representativa del manual de Scrum Master -->
-                </a>
-                <div class="p-5">
-                    <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        <a href="#">Manual de Scrum Master</a>
-                        <!-- Título del manual de Scrum Master -->
-                    </h3>
-                    <p align="justify" class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400 text-align: bg-center">
-                        <!-- Descripción del manual de Scrum Master -->
+
+            <!-- Tarjeta de PowerPoint -->
+            <div class="card flex flex-col bg-gray-50 rounded-lg shadow-lg dark:bg-gray-800">
+                <div class="flex justify-center">
+                    <img class="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none h-48" src="Icono de D SCR.png" alt="Imagen de PowerPoint" style="width: 200px; height: auto">
+                </div>
+                <div class="p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Manual de Scrum Master</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4 text-justify"> <!-- Justificación del texto -->
                         En este apartado encontrarás el manual del departamento de Scrum Master, diseñado para guiar y optimizar sus procesos. Consulta este recurso para entender sus funciones y responsabilidades.
                     </p>
+                    <br><br><br>
+                    <a href="https://drive.google.com/drive/folders/1Qko4Kwc1PipIN1Pjr4dtSNZ0ol30jKkl?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="text-blue-600 inline-flex items-center justify-center border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                            Ingresar
+                        </button>
+                    </a>
                 </div>
-                 <!-- Botón para ingresar al Manual de QA -->
-                 <a href="https://drive.google.com/drive/folders/1Qko4Kwc1PipIN1Pjr4dtSNZ0ol30jKkl?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <button type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                        Ir 
-                    </button>
-                </a> 
             </div>
-            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                <!-- Contenedor para el manual de Dev -->
-                <a href="#">
-                    <img style="width: 800px; height: 200px;" class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="Icono de D OP.png" alt="Canva">
-                    <!-- Imagen representativa del manual de Dev -->
-                </a>
-                <div class="p-5">
-                    <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        <a href="#">Manual de Dev</a>
-                        <!-- Título del manual de Dev -->
-                    </h3>
-                    <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400 text-align: bg-center;">
-                        <!-- Descripción del manual de Dev -->
+
+            <!-- Tarjeta de Power BI -->
+            <div class="card flex flex-col bg-gray-50 rounded-lg shadow-lg dark:bg-gray-800">
+                <div class="flex justify-center">
+                    <img class="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none" src="Icono de D OP.png" alt="Imagen de Power BI" style="width: 200px; height: auto">
+                </div>
+                <div class="p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Manual de Dev</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4 text-justify"> <!-- Justificación del texto -->
                         En este apartado encontrarás el manual del departamento de Desarrollo (DEV), creado para guiar y optimizar sus procesos. Consulta este recurso para comprender sus funciones y responsabilidades.
                     </p>
+                    <br><br><br>
+                    <a href="https://drive.google.com/drive/folders/16sOuVuYATbxg_VMQIEnMXs-D19VAl9b7?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <button type="button" class="text-blue-600 inline-flex items-center justify-center border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                            Ingresar
+                        </button>
+                    </a>
                 </div>
-                 <!-- Botón para ingresar al Manual de DEV -->
-                 <a href="https://drive.google.com/drive/folders/16sOuVuYATbxg_VMQIEnMXs-D19VAl9b7?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <button type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                        Ir 
-                    </button>
-                </a> 
             </div>
         </div>
-
-
+    </div>
+</section>
+</body>
+</html>
