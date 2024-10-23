@@ -26,4 +26,9 @@ export class InicioComponent {
   redirigir3(): void {
     this.router.navigate(['/manuales']); // Navega a la ruta '/Formulario_1' cuando se llama a este método
   }
+
+  regresar(): void{
+    this.router.navigate(['/Perfil']);
+  }
+
 }

@@ -1,104 +1,130 @@
 <!DOCTYPE html>
+<!-- Define que el documento sigue el estándar HTML5 -->
 <html lang="en">
+<!-- Establece que el idioma principal del contenido es inglés -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8, compatible con la mayoría de idiomas y símbolos -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Asegura que la página se vea correctamente en dispositivos móviles ajustando el ancho al viewport -->
+
     <title>Perfil</title>
+    <!-- Define el título de la página, visible en la pestaña del navegador -->
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Carga la hoja de estilos de Tailwind CSS desde un CDN para facilitar el diseño -->
 </head>
-<body>
-<section class="bg-white dark:bg-gray-900" 
-         style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; position: relative;">
-    <!-- Sección principal con fondo blanco o gris oscuro según el modo -->
-    <!-- Logo -->
-    <a href="#">
-        <!-- Enlace al logo que redirige a la página de inicio -->
-        <img src="Precredit.png" alt="Logo" style="position: absolute; top: 10px; left: 10px; width: 200px;">
-        <!-- Imagen del logo con posición absoluta en la parte superior izquierda -->
-    </a>
 
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <!-- Contenedor principal con padding y límite de ancho -->
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-            <!-- Contenedor centrado para el título y la introducción -->
-            <h2 class="mb-4 text-4xl tracking-tight font-normal text-gray-900 dark:text-white">Menú</h2>
+<body class="bg-white dark:bg-gray-900 min-h-screen">
+    <!-- El cuerpo de la página tiene fondo blanco en modo claro y gris oscuro en modo oscuro.
+         La clase 'min-h-screen' asegura que el cuerpo cubra toda la altura de la pantalla -->
 
-            <!-- Título principal de la sección -->
-            <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">En esta sección, encontrarás un menú con una variedad de recursos útiles.
+    <section class="flex flex-col items-center justify-center min-h-screen p-6">
+        <!-- Sección principal que organiza su contenido en columna, centrado vertical y horizontalmente.
+             Tiene padding de 6 unidades y cubre al menos toda la pantalla -->
 
-            </p>
-            <!-- Texto de introducción con un estilo ligero -->
+        <!-- Logo -->
+        <a href="#" class="absolute top-4 left-4">
+            <!-- Enlace para el logo, posicionado en la esquina superior izquierda con 'absolute' -->
+            <img src="Precredit.png" alt="Logo" class="w-32 sm:w-48">
+            <!-- Imagen del logo con un tamaño de 32 unidades (48 en pantallas pequeñas) -->
+        </a>
+
+        <!-- Aquí colocamos el botón en la parte superior derecha -->
+        <div class="absolute top-4 right-4">
+            <button (click)="regresar()" type="button" class="text-blue-600 inline-flex items-center justify-center border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                <!-- Icono de flecha y texto de regreso -->
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                </svg>
+                Regresar
+            </button>
         </div>
+        <!-- Fin del botón en la parte superior derecha -->
 
-        <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-            <!-- Contenedor que usa espacio vertical en pantallas pequeñas y se convierte en cuadrícula en pantallas grandes -->
-            
-            <!-- Plantillas -->
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center  hover:scale-110 text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                <!-- Contenedor para la sección de Plantillas -->
-                <h3 class="mb-4 text-2xl font-semibold">Plantillas</h3>
-                <!-- Título de la sección de Plantillas -->
-                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <!-- Enlace con un logotipo -->
-                    <img src="Plantilla.png" alt="logo" width="300" height="200">
-                    <!-- Imagen del logo con un texto alternativo -->
-                </a>
-                <p align="justify" class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    Plantillas organizadas para agilizar tus proyectos y aumentar tu productividad.
+        <br>
+        <br>
+        <br>
+        <!-- Saltos de línea para dejar espacio vertical adicional -->
+
+        <div class="w-full max-w-screen-xl px-4">
+            <!-- Contenedor que ocupa todo el ancho disponible pero con un máximo de pantalla XL y padding horizontal -->
+
+            <div class="text-center mb-12">
+                <!-- Sección centrada con un margen inferior de 12 unidades -->
+
+                <h2 class="text-4xl font-normal text-gray-900 dark:text-white mb-4">Menú</h2>
+                <!-- Título principal con tamaño grande (4xl), estilo normal y color ajustable al modo claro/oscuro -->
+
+                <p class="text-lg text-gray-500 dark:text-gray-400">
+                    En esta sección, encontrarás un menú con una variedad de recursos útiles.
                 </p>
-                <br>
-                  <br>
+                <!-- Descripción del menú con un tamaño de texto mediano y colores adaptados a ambos modos -->
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Diseño en cuadrícula que tiene 1 columna en pantallas pequeñas, 2 en medianas y 3 en grandes.
+                     La clase 'gap-8' deja 8 unidades de espacio entre los elementos -->
+
+                <!-- Tarjeta de Plantillas -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <!-- Tarjeta con fondo blanco (o gris oscuro en modo oscuro), bordes redondeados y sombra.
+                         El contenido está centrado, con animación de escalado al pasar el ratón ('hover:scale-105') -->
+
+                    <h3 class="text-2xl font-semibold mb-4">Plantillas</h3>
+                    <!-- Título de la tarjeta con tamaño grande (2xl) y texto en negrita -->
+
+                    <a href="#">
+                        <!-- Enlace que (por ahora) no tiene destino -->
+                        <img src="Plantilla.png" alt="Plantilla" class="w-full max-w-xs h-auto mb-4">
+                        <!-- Imagen de la plantilla con ancho ajustable y altura automática -->
+                    </a>
+
+                    <p class="text-gray-500 dark:text-gray-400 mb-6">
+                        Plantillas organizadas para agilizar tus proyectos y aumentar tu productividad.
+                    </p>
+                    <!-- Descripción de las plantillas, con margen inferior -->
                     <br>
-                <!-- Descripción de la sección -->
-                <button (click)="redirigir1()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                    Ingresar
-                </button>
-                <!-- Botón para ingresar a la sección de Plantillas, llamando a la función redirigir1() -->
-            </div>
+                    <button (click)="redirigir1()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                        <!-- Botón que intentaría ejecutar una función Angular (redirigir1) al hacer clic.
+                             Cambia de color al pasar el ratón y tiene un efecto de foco cuando se selecciona -->
+                        Ingresar
+                    </button>
+                </div>
 
-            <!-- Encuestas -->
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center hover:scale-110 text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                <!-- Contenedor para la sección de Encuestas -->
-                <h3 class="mb-4 text-2xl font-semibold">Formularios</h3>
-                <!-- Título de la sección de Encuestas -->
-                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <!-- Enlace con un logotipo -->
-                    <img src="Encuesta.png" alt="Imagen"width="300" height="200">
-                    <!-- Imagen  -->
-                </a>
-                <p align="justify" class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    Encuestas claras para recopilar opiniones, medir satisfacción y apoyar decisiones informadas.
-                </p>
-                <br>
-                <br>
-                <button (click)="redirigir2()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                    Ingresar
-                </button>
-                <!-- Botón para ingresar a la sección de Encuestas, llamando a la función redirigir2() -->
-            </div>
+                <!-- Tarjeta de Formularios -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <h3 class="text-2xl font-semibold mb-4">Formularios</h3>
+                    <a href="#">
+                        <img src="Encuesta.png" alt="Encuesta" class="w-full max-w-xs h-auto mb-4">
+                    </a>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6">
+                        Encuestas claras para recopilar opiniones, medir satisfacción y apoyar decisiones informadas.
+                    </p>
+                    <br>
+                    <button (click)="redirigir2()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                        Ingresar
+                    </button>
+                </div>
 
-            <!-- Manuales -->
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center hover:scale-110  text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                <!-- Contenedor para la sección de Manuales -->
-                <h3 class="mb-4 text-2xl font-semibold">Manuales</h3>
-                <!-- Título de la sección de Manuales -->
-                 <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                <!-- Enlace con un logotipo -->
-                <img src="Manual2.png" alt="logo"width="300" height="200">
-                <!-- Imagen -->
-            </a>
-             <p align="justify" class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                En esta sección encontrarás manuales con instrucciones claras para facilitar tus tareas y procesos.
-            </p>
-            <br>
-                <br>
-                <button (click)="redirigir3()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                    Ingresar
-                </button>
-                <!-- Botón para ingresar a la sección de Manuales sin función asociada -->
+                <!-- Tarjeta de Manuales -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <h3 class="text-2xl font-semibold mb-4">Manuales</h3>
+                    <a href="#">
+                        <img src="Manual2.png" alt="Manual" class="w-full max-w-xs h-auto mb-4">
+                    </a>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6">
+                        En esta sección encontrarás manuales con instrucciones claras para facilitar tus tareas y procesos.
+                    </p>
+                    <button (click)="redirigir3()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                        Ingresar
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
 </body>
 </html>
