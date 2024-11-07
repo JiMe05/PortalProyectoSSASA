@@ -31,4 +31,23 @@ export class InicioComponent {
     this.router.navigate(['/Perfil']);
   }
 
+  redirigir4(): void{
+    this.router.navigate(['/contactos']);
+  }
+
+  redirigir5(): void{
+    this.router.navigate(['/herramientas'])
+  }
+
+  redirigir6():void{
+    this.router.navigate(['/cronogramas'])
+  }
+
+  
+  redirigir7():void{
+    this.router.navigate(['/Proyectos'])
+  }
+
+  
+
 }

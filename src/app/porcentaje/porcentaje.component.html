@@ -1,0 +1,263 @@
+  <!DOCTYPE html> <!-- Declaración del tipo de documento como HTML5 -->
+  <html lang="en"> <!-- Inicio del documento HTML con el idioma establecido como inglés -->
+  <head>
+      <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para el diseño responsivo en dispositivos móviles -->
+      <title>Porcentaje</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+      <!-- Enlace a la hoja de estilos de Tailwind CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Importa Tailwind CSS para estilos predefinidos -->
+      <style>
+          /* Estilos personalizados */
+          .card { 
+              transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para efectos de hover */
+          }
+          .card:hover { 
+              transform: translateY(-5px); /* Desplazar hacia arriba al hacer hover */
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra al hacer hover */
+          }
+      </style>
+  </head>
+  <br>
+    <br>  
+      <br>
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-semibold text-blue-900 dark:text-white mb-4">Porcentajes de Proyectos</h1>
+  </div>
+  <br>
+    <br>
+      <br>
+        <br>
+          <br>  
+  <body class="bg-white dark:bg-gray-900"> <!-- Fondo blanco en modo claro y gris oscuro en modo oscuro -->
+  <section class="min-h-screen p-8"> <!-- Sección que ocupa al menos toda la altura de la pantalla y tiene un padding de 8 -->
+      <a href="#"> <!-- Enlace sin destino definido -->
+          <img src="Precredit.png" alt="Logo" class="absolute top-4 left-4 w-24 md:w-40"> <!-- Logo en la esquina superior izquierda, con dimensiones responsivas -->
+      </a>
+      <div class="absolute top-4 right-4"> <!-- Contenedor para el botón en la esquina superior derecha -->
+          <button (click)="redirigir()" type="button" class="text-blue-600 inline-flex items-center justify-center border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+              <!-- Botón para redirigir, con estilos de Tailwind -->
+              <!-- Icono de flecha y texto de regreso -->
+              <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"> <!-- Icono SVG de flecha -->
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/> <!-- Define el camino del icono de la flecha -->
+              </svg>
+              Regresar <!-- Texto del botón -->
+          </button>
+      </div>
+
+      <div class="tarjeta"> <!-- Contenedor para la tarjeta que muestra información -->
+          <h2>{{ nombre }}</h2> <!-- Muestra el nombre utilizando la interpolación de Angular -->
+          <h2>Porcentaje: {{ porcentaje }}%</h2> <!-- Muestra el porcentaje utilizando la interpolación de Angular -->
+          <canvas #grafica></canvas> 
+        
+          <div class="botones"> <!-- Contenedor para los botones de incrementar y decrementar -->
+            <button (click)="incrementar()">Incrementar</button> <!-- Botón para incrementar el porcentaje -->
+            <button (click)="decremetar()">Decrementar</button> <!-- Botón para decrementar el porcentaje -->
+          </div>
+          
+          <div class="edicion" *ngIf="editando"> <!-- Se muestra si la variable 'editando' es verdadera -->
+            <input [(ngModel)]="porcentaje" type="number" min="0" max="100" /> <!-- Campo de entrada para editar el porcentaje, enlazado a la variable 'porcentaje' -->
+            <button (click)="guardarEdicion()">Guardar</button> <!-- Botón para guardar la edición del porcentaje -->
+          </div>
+          
+          <div> <!-- Contenedor para la edición del nombre -->
+            <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
+            <input [(ngModel)]="nombre" type="text" /> <!-- Campo de entrada para editar el nombre, enlazado a la variable 'nombre' -->
+            <button (click)="guardarEdicion()">Guardar Nombre</button> <!-- Botón para guardar el nombre editado -->
+          </div>
+        
+          <div> <!-- Contenedor para la selección del color de progreso -->
+            <label for="color">Color de Progreso:</label> <!-- Etiqueta para el campo de color -->
+            <input type="color" (change)="cambiarColor($event)" [value]="color" /> <!-- Selector de color que llama a 'cambiarColor' al cambiar, con el valor predeterminado del color -->
+          </div>
+
+
+
+          <!-- Tarjeta 2 -->
+          <div class="tarjeta2"> <!-- Contenedor para la tarjeta que muestra información -->
+              <h2>{{ nombre2 }}</h2> <!-- Muestra el nombre utilizando la interpolación de Angular -->
+              <h2>Porcentaje: {{ porcentaje2 }}%</h2> <!-- Muestra el porcentaje utilizando la interpolación de Angular -->
+              <canvas #grafica2></canvas> <!-- Nuevo canvas para la segunda gráfica -->
+            
+              <div class="botones"> <!-- Contenedor para los botones de incrementar y decrementar -->
+                <button (click)="incrementar2()">Incrementar</button> <!-- Botón para incrementar el porcentaje -->
+                <button (click)="decrementar2()">Decrementar</button> <!-- Botón para decrementar el porcentaje -->
+              </div>
+              <div class="edicion" *ngIf="editando2"> <!-- Se muestra si la variable 'editando' es verdadera -->
+                <input [(ngModel)]="porcentaje2" type="number" min="0" max="100" /> <!-- Campo de entrada para editar el porcentaje, enlazado a la variable 'porcentaje2' -->
+                <button (click)="guardarEdicion2()">Guardar</button> <!-- Botón para guardar la edición del porcentaje -->
+              </div>
+              <div> <!-- Contenedor para la edición del nombre -->
+                <label for="nombre2">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
+                <input [(ngModel)]="nombre2" type="text" /> <!-- Campo de entrada para editar el nombre, enlazado a la variable 'nombre2' -->
+                <button (click)="guardarEdicion2()">Guardar Nombre</button> <!-- Botón para guardar el nombre editado -->
+              </div>
+              <div> <!-- Contenedor para la selección del color de progreso -->
+                <label for="color2">Color de Progreso:</label> <!-- Etiqueta para el campo de color -->
+                <input type="color" (change)="cambiarColor2($event)" [value]="color2" /> <!-- Selector de color que llama a 'cambiarColor' al cambiar, con el valor predeterminado del color -->
+              </div>
+          </div>
+      </div>
+
+
+          <!-- Tarjeta 3 -->
+          <div class="tarjeta3"> <!-- Contenedor para la tarjeta que muestra información -->
+            <h2>{{ nombre3 }}</h2> <!-- Muestra el nombre utilizando la interpolación de Angular -->
+            <h2>Porcentaje: {{ porcentaje3 }}%</h2> <!-- Muestra el porcentaje utilizando la interpolación de Angular -->
+            <canvas #grafica3></canvas> <!-- Nuevo canvas para la segunda gráfica -->
+          
+            <div class="botones"> <!-- Contenedor para los botones de incrementar y decrementar -->
+              <button (click)="incrementar3()">Incrementar</button> <!-- Botón para incrementar el porcentaje -->
+              <button (click)="decrementar3()">Decrementar</button> <!-- Botón para decrementar el porcentaje -->
+            </div>
+            <div class="edicion" *ngIf="editando3"> <!-- Se muestra si la variable 'editando' es verdadera -->
+              <input [(ngModel)]="porcentaje3" type="number" min="0" max="100" /> <!-- Campo de entrada para editar el porcentaje, enlazado a la variable 'porcentaje2' -->
+              <button (click)="guardarEdicion3()">Guardar</button> <!-- Botón para guardar la edición del porcentaje -->
+            </div>
+            <div> <!-- Contenedor para la edición del nombre -->
+              <label for="nombre2">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
+              <input [(ngModel)]="nombre3" type="text" /> <!-- Campo de entrada para editar el nombre, enlazado a la variable 'nombre2' -->
+              <button (click)="guardarEdicion3()">Guardar Nombre</button> <!-- Botón para guardar el nombre editado -->
+            </div>
+            <div> <!-- Contenedor para la selección del color de progreso -->
+              <label for="color3">Color de Progreso:</label> <!-- Etiqueta para el campo de color -->
+              <input type="color" (change)="cambiarColor3($event)" [value]="color3" /> <!-- Selector de color que llama a 'cambiarColor' al cambiar, con el valor predeterminado del color -->
+            </div>
+        </div>
+    
+
+        
+          <!-- Tarjeta 4 -->
+          <div class="tarjeta4"> <!-- Contenedor para la tarjeta que muestra información -->
+            <h2>{{ nombre4 }}</h2> <!-- Muestra el nombre utilizando la interpolación de Angular -->
+            <h2>Porcentaje: {{ porcentaje4 }}%</h2> <!-- Muestra el porcentaje utilizando la interpolación de Angular -->
+            <canvas #grafica4></canvas> <!-- Nuevo canvas para la segunda gráfica -->
+          
+            <div class="botones"> <!-- Contenedor para los botones de incrementar y decrementar -->
+              <button (click)="incrementar4()">Incrementar</button> <!-- Botón para incrementar el porcentaje -->
+              <button (click)="decrementar4()">Decrementar</button> <!-- Botón para decrementar el porcentaje -->
+            </div>
+            <div class="edicion" *ngIf="editando4"> <!-- Se muestra si la variable 'editando' es verdadera -->
+              <input [(ngModel)]="porcentaje4" type="number" min="0" max="100" /> <!-- Campo de entrada para editar el porcentaje, enlazado a la variable 'porcentaje2' -->
+              <button (click)="guardarEdicion4()">Guardar</button> <!-- Botón para guardar la edición del porcentaje -->
+            </div>
+            <div> <!-- Contenedor para la edición del nombre -->
+              <label for="nombre4">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
+              <input [(ngModel)]="nombre4" type="text" /> <!-- Campo de entrada para editar el nombre, enlazado a la variable 'nombre2' -->
+              <button (click)="guardarEdicion4()">Guardar Nombre</button> <!-- Botón para guardar el nombre editado -->
+            </div>
+            <div> <!-- Contenedor para la selección del color de progreso -->
+              <label for="color4">Color de Progreso:</label> <!-- Etiqueta para el campo de color -->
+              <input type="color" (change)="cambiarColor4($event)" [value]="color4" /> <!-- Selector de color que llama a 'cambiarColor' al cambiar, con el valor predeterminado del color -->
+            </div>
+        </div>
+
+
+        
+          <!-- Tarjeta 5 -->
+          <div class="tarjeta5"> <!-- Contenedor para la tarjeta que muestra información -->
+            <h2>{{ nombre5 }}</h2> <!-- Muestra el nombre utilizando la interpolación de Angular -->
+            <h2>Porcentaje: {{ porcentaje5 }}%</h2> <!-- Muestra el porcentaje utilizando la interpolación de Angular -->
+            <canvas #grafica5></canvas> <!-- Nuevo canvas para la segunda gráfica -->
+          
+            <div class="botones"> <!-- Contenedor para los botones de incrementar y decrementar -->
+              <button (click)="incrementar5()">Incrementar</button> <!-- Botón para incrementar el porcentaje -->
+              <button (click)="decrementar5()">Decrementar</button> <!-- Botón para decrementar el porcentaje -->
+            </div>
+            <div class="edicion" *ngIf="editando5"> <!-- Se muestra si la variable 'editando' es verdadera -->
+              <input [(ngModel)]="porcentaje5" type="number" min="0" max="100" /> <!-- Campo de entrada para editar el porcentaje, enlazado a la variable 'porcentaje2' -->
+              <button (click)="guardarEdicion5()">Guardar</button> <!-- Botón para guardar la edición del porcentaje -->
+            </div>
+            <div> <!-- Contenedor para la edición del nombre -->
+              <label for="nombre5">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
+              <input [(ngModel)]="nombre5" type="text" /> <!-- Campo de entrada para editar el nombre, enlazado a la variable 'nombre2' -->
+              <button (click)="guardarEdicion5()">Guardar Nombre</button> <!-- Botón para guardar el nombre editado -->
+            </div>
+            <div> <!-- Contenedor para la selección del color de progreso -->
+              <label for="color5">Color de Progreso:</label> <!-- Etiqueta para el campo de color -->
+              <input type="color" (change)="cambiarColor5($event)" [value]="color5" /> <!-- Selector de color que llama a 'cambiarColor' al cambiar, con el valor predeterminado del color -->
+            </div>
+        </div>
+
+        
+          <!-- Tarjeta 6 -->
+          <div class="tarjeta6"> <!-- Contenedor para la tarjeta que muestra información -->
+            <h2>{{ nombre6 }}</h2> <!-- Muestra el nombre utilizando la interpolación de Angular -->
+            <h2>Porcentaje: {{ porcentaje6 }}%</h2> <!-- Muestra el porcentaje utilizando la interpolación de Angular -->
+            <canvas #grafica6></canvas> <!-- Nuevo canvas para la segunda gráfica -->
+          
+            <div class="botones"> <!-- Contenedor para los botones de incrementar y decrementar -->
+              <button (click)="incrementar6()">Incrementar</button> <!-- Botón para incrementar el porcentaje -->
+              <button (click)="decrementar6()">Decrementar</button> <!-- Botón para decrementar el porcentaje -->
+            </div>
+            <div class="edicion" *ngIf="editando6"> <!-- Se muestra si la variable 'editando' es verdadera -->
+              <input [(ngModel)]="porcentaje6" type="number" min="0" max="100" /> <!-- Campo de entrada para editar el porcentaje, enlazado a la variable 'porcentaje2' -->
+              <button (click)="guardarEdicion6()">Guardar</button> <!-- Botón para guardar la edición del porcentaje -->
+            </div>
+            <div> <!-- Contenedor para la edición del nombre -->
+              <label for="nombre6">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
+              <input [(ngModel)]="nombre6" type="text" /> <!-- Campo de entrada para editar el nombre, enlazado a la variable 'nombre2' -->
+              <button (click)="guardarEdicion6()">Guardar Nombre</button> <!-- Botón para guardar el nombre editado -->
+            </div>
+            <div> <!-- Contenedor para la selección del color de progreso -->
+              <label for="color6">Color de Progreso:</label> <!-- Etiqueta para el campo de color -->
+              <input type="color" (change)="cambiarColor6($event)" [value]="color6" /> <!-- Selector de color que llama a 'cambiarColor' al cambiar, con el valor predeterminado del color -->
+            </div>
+        </div>
+
+        
+          <!-- Tarjeta 7 -->
+          <div class="tarjeta7"> <!-- Contenedor para la tarjeta que muestra información -->
+            <h2>{{ nombre7 }}</h2> <!-- Muestra el nombre utilizando la interpolación de Angular -->
+            <h2>Porcentaje: {{ porcentaje7 }}%</h2> <!-- Muestra el porcentaje utilizando la interpolación de Angular -->
+            <canvas #grafica7></canvas> <!-- Nuevo canvas para la segunda gráfica -->
+          
+            <div class="botones"> <!-- Contenedor para los botones de incrementar y decrementar -->
+              <button (click)="incrementar7()">Incrementar</button> <!-- Botón para incrementar el porcentaje -->
+              <button (click)="decrementar7()">Decrementar</button> <!-- Botón para decrementar el porcentaje -->
+            </div>
+            <div class="edicion" *ngIf="editando7"> <!-- Se muestra si la variable 'editando' es verdadera -->
+              <input [(ngModel)]="porcentaje7" type="number" min="0" max="100" /> <!-- Campo de entrada para editar el porcentaje, enlazado a la variable 'porcentaje2' -->
+              <button (click)="guardarEdicion7()">Guardar</button> <!-- Botón para guardar la edición del porcentaje -->
+            </div>
+            <div> <!-- Contenedor para la edición del nombre -->
+              <label for="nombre7">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
+              <input [(ngModel)]="nombre7" type="text" /> <!-- Campo de entrada para editar el nombre, enlazado a la variable 'nombre2' -->
+              <button (click)="guardarEdicion7()">Guardar Nombre</button> <!-- Botón para guardar el nombre editado -->
+            </div>
+            <div> <!-- Contenedor para la selección del color de progreso -->
+              <label for="color7">Color de Progreso:</label> <!-- Etiqueta para el campo de color -->
+              <input type="color" (change)="cambiarColor7($event)" [value]="color7" /> <!-- Selector de color que llama a 'cambiarColor' al cambiar, con el valor predeterminado del color -->
+            </div>
+        </div>
+
+        
+          <!-- Tarjeta 8 -->
+          <div class="tarjeta8"> <!-- Contenedor para la tarjeta que muestra información -->
+            <h2>{{ nombre8 }}</h2> <!-- Muestra el nombre utilizando la interpolación de Angular -->
+            <h2>Porcentaje: {{ porcentaje8 }}%</h2> <!-- Muestra el porcentaje utilizando la interpolación de Angular -->
+            <canvas #grafica8></canvas> <!-- Nuevo canvas para la segunda gráfica -->
+          
+            <div class="botones"> <!-- Contenedor para los botones de incrementar y decrementar -->
+              <button (click)="incrementar8()">Incrementar</button> <!-- Botón para incrementar el porcentaje -->
+              <button (click)="decrementar8()">Decrementar</button> <!-- Botón para decrementar el porcentaje -->
+            </div>
+            <div class="edicion" *ngIf="editando8"> <!-- Se muestra si la variable 'editando' es verdadera -->
+              <input [(ngModel)]="porcentaje8" type="number" min="0" max="100" /> <!-- Campo de entrada para editar el porcentaje, enlazado a la variable 'porcentaje2' -->
+              <button (click)="guardarEdicion8()">Guardar</button> <!-- Botón para guardar la edición del porcentaje -->
+            </div>
+            <div> <!-- Contenedor para la edición del nombre -->
+              <label for="nombre8">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
+              <input [(ngModel)]="nombre8" type="text" /> <!-- Campo de entrada para editar el nombre, enlazado a la variable 'nombre2' -->
+              <button (click)="guardarEdicion8()">Guardar Nombre</button> <!-- Botón para guardar el nombre editado -->
+            </div>
+            <div> <!-- Contenedor para la selección del color de progreso -->
+              <label for="color8">Color de Progreso:</label> <!-- Etiqueta para el campo de color -->
+              <input type="color" (change)="cambiarColor8($event)" [value]="color8" /> <!-- Selector de color que llama a 'cambiarColor' al cambiar, con el valor predeterminado del color -->
+            </div>
+        </div>
+
+
+
+  </section>
+  </body>
+  </html>

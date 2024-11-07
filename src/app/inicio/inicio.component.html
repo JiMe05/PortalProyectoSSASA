@@ -1,38 +1,21 @@
 <!DOCTYPE html>
-<!-- Define que el documento sigue el estándar HTML5 -->
 <html lang="en">
-<!-- Establece que el idioma principal del contenido es inglés -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- Define la codificación de caracteres como UTF-8, compatible con la mayoría de idiomas y símbolos -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Asegura que la página se vea correctamente en dispositivos móviles ajustando el ancho al viewport -->
-
     <title>Perfil</title>
-    <!-- Define el título de la página, visible en la pestaña del navegador -->
-
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Carga la hoja de estilos de Tailwind CSS desde un CDN para facilitar el diseño -->
 </head>
 
 <body class="bg-white dark:bg-gray-900 min-h-screen">
-    <!-- El cuerpo de la página tiene fondo blanco en modo claro y gris oscuro en modo oscuro.
-         La clase 'min-h-screen' asegura que el cuerpo cubra toda la altura de la pantalla -->
 
     <section class="flex flex-col items-center justify-center min-h-screen p-6">
-        <!-- Sección principal que organiza su contenido en columna, centrado vertical y horizontalmente.
-             Tiene padding de 6 unidades y cubre al menos toda la pantalla -->
 
-        <!-- Logo -->
         <a href="#" class="absolute top-4 left-4">
-            <!-- Enlace para el logo, posicionado en la esquina superior izquierda con 'absolute' -->
-            <img src="Precredit.png" alt="Logo" class="w-32 sm:w-48">
-            <!-- Imagen del logo con un tamaño de 32 unidades (48 en pantallas pequeñas) -->
+            <img src="Precredit.png" alt="Logo" class="w-24 sm:w-36">
         </a>
 
-        <!-- Aquí colocamos el botón en la parte superior derecha -->
         <div class="absolute top-4 right-4">
             <button (click)="regresar()" type="button" class="text-blue-600 inline-flex items-center justify-center border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
                 <!-- Icono de flecha y texto de regreso -->
@@ -42,83 +25,101 @@
                 Regresar
             </button>
         </div>
-        <!-- Fin del botón en la parte superior derecha -->
-
-        <br>
-        <br>
-        <br>
-        <!-- Saltos de línea para dejar espacio vertical adicional -->
-
-        <div class="w-full max-w-screen-xl px-4">
-            <!-- Contenedor que ocupa todo el ancho disponible pero con un máximo de pantalla XL y padding horizontal -->
-
-            <div class="text-center mb-12">
-                <!-- Sección centrada con un margen inferior de 12 unidades -->
-
-                <h2 class="text-4xl font-normal text-gray-900 dark:text-white mb-4">Menú</h2>
-                <!-- Título principal con tamaño grande (4xl), estilo normal y color ajustable al modo claro/oscuro -->
-
-                <p class="text-lg text-gray-500 dark:text-gray-400">
+            <br>
+                <br>
+                    <br>
+        <div class="w-full max-w-screen-lg px-4">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-normal text-gray-900 dark:text-white mb-2">Menú</h1>
+                <p class="text-base text-gray-500 dark:text-gray-400">
                     En esta sección, encontrarás un menú con una variedad de recursos útiles.
                 </p>
-                <!-- Descripción del menú con un tamaño de texto mediano y colores adaptados a ambos modos -->
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Diseño en cuadrícula que tiene 1 columna en pantallas pequeñas, 2 en medianas y 3 en grandes.
-                     La clase 'gap-8' deja 8 unidades de espacio entre los elementos -->
-
-                <!-- Tarjeta de Plantillas -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
-                    <!-- Tarjeta con fondo blanco (o gris oscuro en modo oscuro), bordes redondeados y sombra.
-                         El contenido está centrado, con animación de escalado al pasar el ratón ('hover:scale-105') -->
-
-                    <h3 class="text-2xl font-semibold mb-4">Plantillas</h3>
-                    <!-- Título de la tarjeta con tamaño grande (2xl) y texto en negrita -->
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tarjetas más pequeñas -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2">Plantillas</h3>
                     <a href="#">
-                        <!-- Enlace que (por ahora) no tiene destino -->
-                        <img src="Plantilla.png" alt="Plantilla" class="w-full max-w-xs h-auto mb-4">
-                        <!-- Imagen de la plantilla con ancho ajustable y altura automática -->
+                        <img src="Plantilla.png" alt="Plantilla" class="w-40 h-auto mb-3">
                     </a>
-
-                    <p class="text-gray-500 dark:text-gray-400 mb-6">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
                         Plantillas organizadas para agilizar tus proyectos y aumentar tu productividad.
                     </p>
-                    <!-- Descripción de las plantillas, con margen inferior -->
                     <br>
-                    <button (click)="redirigir1()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                        <!-- Botón que intentaría ejecutar una función Angular (redirigir1) al hacer clic.
-                             Cambia de color al pasar el ratón y tiene un efecto de foco cuando se selecciona -->
+                    <button (click)="redirigir1()" type="button"
+                        class="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2">
                         Ingresar
                     </button>
                 </div>
 
-                <!-- Tarjeta de Formularios -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
-                    <h3 class="text-2xl font-semibold mb-4">Formularios</h3>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2">Cronograma</h3>
                     <a href="#">
-                        <img src="Encuesta.png" alt="Encuesta" class="w-full max-w-xs h-auto mb-4">
+                        <img src="Icono cronograma.png" alt="Cronograma" class="w-40 h-auto mb-3">
                     </a>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6">
-                        Encuestas claras para recopilar opiniones, medir satisfacción y apoyar decisiones informadas.
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        Consulta cronogramas con fechas y actividades programadas para una planificación efectiva.
                     </p>
-                    <br>
-                    <button (click)="redirigir2()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                    <button (click)="redirigir6()" type="button"
+                        class="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2">
                         Ingresar
                     </button>
                 </div>
 
-                <!-- Tarjeta de Manuales -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
-                    <h3 class="text-2xl font-semibold mb-4">Manuales</h3>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2">Manuales</h3>
                     <a href="#">
-                        <img src="Manual2.png" alt="Manual" class="w-full max-w-xs h-auto mb-4">
+                        <img src="Manual2.png" alt="Manual" class="w-40 h-auto mb-3">
                     </a>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6">
-                        En esta sección encontrarás manuales con instrucciones claras para facilitar tus tareas y procesos.git
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        Manuales con instrucciones claras para facilitar tareas y procesos.
                     </p>
-                    <button (click)="redirigir3()" type="button" class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                    <br>
+                    <button (click)="redirigir3()" type="button"
+                        class="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2">
+                        Ingresar
+                    </button>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2">Contactos</h3>
+                    <a href="#">
+                        <img src="Icono de contactos.png" alt="Contactos" class="w-40 h-auto mb-3">
+                    </a>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        Gestiona los contactos de nuestros clientes fácilmente.
+                    </p>
+                    <button (click)="redirigir4()" type="button"
+                        class="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2">
+                        Ingresar
+                    </button>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2">Herramientas</h3>
+                    <a href="#">
+                        <img src="Icono de herramientas.png" alt="Herramientas" class="w-40 h-auto mb-3">
+                    </a>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        Accede a herramientas útiles para optimizar tareas.
+                    </p>
+                    <button (click)="redirigir5()" type="button"
+                        class="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2">
+                        Ingresar
+                    </button>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col items-center text-center border border-gray-100 dark:border-gray-600 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold mb-2">Proyectos</h3>
+                    <a href="#">
+                        <img src="Icono de proyecto.png" alt="Proyectos" class="w-40 h-auto mb-3">
+                    </a>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                        Consulta detalles, plazos y avances de los proyectos en curso.
+                    </p>
+                    <button (click)="redirigir7()" type="button"
+                        class="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2">
                         Ingresar
                     </button>
                 </div>

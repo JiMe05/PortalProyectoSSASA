@@ -1,0 +1,2 @@
+console.log('Editando:', this.editando);
+console.log('Contacto a editar:', this.contactoAEditar);

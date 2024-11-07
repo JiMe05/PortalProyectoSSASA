@@ -5,24 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilo para la imagen de fondo */
+        .bg-custom {
+            background-image: url('Fondo3.jpg'); /* Cambia esta ruta por la ubicación de tu imagen */
+            background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+            background-position: center; /* Centra la imagen */
+        }
+    </style>
 </head>
 <body>
-    <section class="bg-gray-50 dark:bg-gray-900 min-h-screen flex items-center justify-center">
-        <div class="flex flex-col items-center justify-center px-6 py-8 w-full max-w-md">
+    <section class="bg-custom min-h-screen flex items-center justify-center p-4">
+        <div class="flex flex-col items-center justify-center w-full max-w-sm bg-white bg-opacity-80 rounded-lg shadow-lg p-6 md:max-w-md lg:max-w-lg">
             <!-- Logo y título -->
             <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                <img style="width: 500px; height: auto;" src="Precredit.png" alt="logo">
+                <img class="w-full h-auto max-w-xs md:max-w-sm lg:max-w-md" src="Precredit.png" alt="logo"> <!-- Responsivo -->
             </a>
             <br>
-                <br>
-            <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-blue-900 dark:text-white">Bienvenidos al portal de proyectos</h2>
+            <div class="mx-auto text-center mb-8 lg:mb-16">
+                <h2 class="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-blue-900 dark:text-white">Bienvenidos al portal de proyectos</h2>
             </div>  
-            <!--Boton para ingresar a inicio-->  
+            <!-- Botón para ingresar a inicio -->  
             <button 
                 (click)="redirigir()" 
                 type="button" 
-                class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
+                class="text-blue-600 inline-flex items-center justify-center w-full hover:text-white border border-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:text-base px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
                 Ingresar
             </button>
         </div>

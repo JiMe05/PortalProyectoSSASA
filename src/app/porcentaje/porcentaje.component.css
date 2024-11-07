@@ -1,0 +1,509 @@
+.tarjeta {
+    width: 300px; /* Establece el ancho de la tarjeta en 300 píxeles */
+    position: absolute; /* Posiciona la tarjeta de manera absoluta en relación con su contenedor */
+    top: 160px; /* Coloca la tarjeta a 120 píxeles desde la parte superior del contenedor */
+    left: 60px; /* Coloca la tarjeta a 50 píxeles desde la izquierda del contenedor */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 8px; /* Aplica un radio de borde de 8 píxeles para esquinas redondeadas */
+    padding: 15px; /* Añade un relleno interno de 15 píxeles alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para dar efecto de profundidad */
+    background-color: #fff; /* Establece el color de fondo de la tarjeta a blanco */
+}
+  
+h2 {
+    margin-top: 0; /* Elimina el margen superior del elemento h2 */
+    font-size: 20px; /* Establece el tamaño de fuente del h2 a 20 píxeles */
+    color: #333; /* Establece el color del texto a un gris oscuro */
+}
+  
+canvas {
+    max-width: 100%; /* Limita el ancho máximo del canvas al 100% del contenedor */
+    height: 250px; /* Establece la altura del canvas a 250 píxeles */
+}
+  
+.botones {
+    margin-top: 10px; /* Añade un margen superior de 10 píxeles a los botones */
+}
+  
+button {
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor de los botones */
+    padding: 8px 12px; /* Añade un relleno interno de 8 píxeles en la parte superior/inferior y 12 píxeles en los lados */
+    border: none; /* Elimina el borde por defecto del botón */
+    background-color: #125fb1; /* Establece el color de fondo del botón a un azul oscuro */
+    color: white; /* Establece el color del texto del botón a blanco */
+    border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+  
+button:hover {
+    background-color: #125fb1; /* Mantiene el mismo color de fondo al pasar el ratón sobre el botón */
+}
+  
+.edicion {
+    margin-top: 10px; /* Añade un margen superior de 10 píxeles al elemento de edición */
+}
+  
+input[type="number"],
+input[type="text"] {
+    width: 60px; /* Establece el ancho de los campos de entrada numéricos y de texto a 60 píxeles */
+    padding: 5px; /* Añade un relleno interno de 5 píxeles */
+    text-align: center; /* Centra el texto dentro del campo de entrada */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor de los campos de entrada */
+}
+  
+input[type="color"] {
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor del selector de color */
+}
+
+
+  
+/* Tarjeta 2 */
+.tarjeta2 {
+    width: 300px; /* Establece el ancho de la segunda tarjeta en 300 píxeles */
+    position: absolute; /* Posiciona la tarjeta de manera absoluta en relación con su contenedor */
+    top: -1px; /* Coloca la tarjeta a -1 píxel desde la parte superior del contenedor */
+    right: -380px; /* Coloca la tarjeta fuera de la vista a la derecha del contenedor */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 8px; /* Aplica un radio de borde de 8 píxeles para esquinas redondeadas */
+    padding: 15px; /* Añade un relleno interno de 15 píxeles alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para dar efecto de profundidad */
+    background-color: #fff; /* Establece el color de fondo de la tarjeta a blanco */
+}
+
+h2 {
+    margin-top: 0; /* Elimina el margen superior del elemento h2 */
+    font-size: 20px; /* Establece el tamaño de fuente del h2 a 20 píxeles */
+    color: #333; /* Establece el color del texto a un gris oscuro */
+}
+  
+canvas {
+    max-width: 100%; /* Limita el ancho máximo del canvas al 100% del contenedor */
+    height: 250px; /* Establece la altura del canvas a 250 píxeles */
+}
+  
+.botones {
+    margin-top: 10px; /* Añade un margen superior de 10 píxeles a los botones */
+}
+  
+button {
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor de los botones */
+    padding: 8px 12px; /* Añade un relleno interno de 8 píxeles en la parte superior/inferior y 12 píxeles en los lados */
+    border: none; /* Elimina el borde por defecto del botón */
+    background-color: #125fb1; /* Establece el color de fondo del botón a un azul oscuro */
+    color: white; /* Establece el color del texto del botón a blanco */
+    border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+  
+button:hover {
+    background-color: #125fb1; /* Mantiene el mismo color de fondo al pasar el ratón sobre el botón */
+}
+  
+.edicion {
+    margin-top: 10px; /* Añade un margen superior de 10 píxeles al elemento de edición */
+}
+  
+input[type="number2"],
+input[type="text"] {
+    width: 60px; /* Establece el ancho de los campos de entrada numéricos y de texto a 60 píxeles */
+    padding: 5px; /* Añade un relleno interno de 5 píxeles */
+    text-align: center; /* Centra el texto dentro del campo de entrada */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor de los campos de entrada */
+}
+  
+input[type="color2"] {
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor del selector de color */
+}
+
+
+
+  
+/* Tarjeta 3 */
+.tarjeta3 {
+  width: 300px; /* Establece el ancho de la tercera tarjeta en 300 píxeles */
+  position: absolute; /* Posiciona la tarjeta de manera absoluta en relación con su contenedor */
+  top: 160px; /* Baja la tarjeta un poco más desde la parte superior del contenedor */
+  left: 57%; /* Coloca la tarjeta en el centro del contenedor */
+  transform: translateX(-50%); /* Ajusta la tarjeta para que quede centrada en la mitad */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+  border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+  border-radius: 8px; /* Aplica un radio de borde de 8 píxeles para esquinas redondeadas */
+  padding: 15px; /* Añade un relleno interno de 15 píxeles alrededor del contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para dar efecto de profundidad */
+  background-color: #fff; /* Establece el color de fondo de la tarjeta a blanco */
+  }
+  
+
+h2 {
+    margin-top: 0; /* Elimina el margen superior del elemento h2 */
+    font-size: 20px; /* Establece el tamaño de fuente del h2 a 20 píxeles */
+    color: #333; /* Establece el color del texto a un gris oscuro */
+}
+  
+canvas {
+    max-width: 100%; /* Limita el ancho máximo del canvas al 100% del contenedor */
+    height: 250px; /* Establece la altura del canvas a 250 píxeles */
+}
+  
+.botones {
+    margin-top: 10px; /* Añade un margen superior de 10 píxeles a los botones */
+}
+  
+button {
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor de los botones */
+    padding: 8px 12px; /* Añade un relleno interno de 8 píxeles en la parte superior/inferior y 12 píxeles en los lados */
+    border: none; /* Elimina el borde por defecto del botón */
+    background-color: #125fb1; /* Establece el color de fondo del botón a un azul oscuro */
+    color: white; /* Establece el color del texto del botón a blanco */
+    border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+  
+button:hover {
+    background-color: #125fb1; /* Mantiene el mismo color de fondo al pasar el ratón sobre el botón */
+}
+  
+.edicion {
+    margin-top: 10px; /* Añade un margen superior de 10 píxeles al elemento de edición */
+}
+  
+input[type="number3"],
+input[type="text"] {
+    width: 60px; /* Establece el ancho de los campos de entrada numéricos y de texto a 60 píxeles */
+    padding: 5px; /* Añade un relleno interno de 5 píxeles */
+    text-align: center; /* Centra el texto dentro del campo de entrada */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor de los campos de entrada */
+}
+  
+input[type="color3"] {
+    margin: 5px; /* Añade un margen de 5 píxeles alrededor del selector de color */
+}
+
+
+
+  
+/* Tarjeta 4 */
+.tarjeta4 {
+    width: 300px; /* Establece el ancho de la tarjeta */
+    position: absolute; /* Posiciona la tarjeta de manera absoluta en relación con su contenedor */
+    top: 160px; /* Baja la tarjeta un poco más desde la parte superior del contenedor */
+    left: 62%; /* Coloca la tarjeta a la mitad del contenedor */
+    transform: translateX(50%); /* Ajusta la tarjeta para que quede alineada con la primera */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 8px; /* Aplica un radio de borde de 8 píxeles para esquinas redondeadas */
+    padding: 15px; /* Añade un relleno interno de 15 píxeles alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para dar efecto de profundidad */
+    background-color: #fff; /* Establece el color de fondo de la tarjeta a blanco */
+    }
+    
+  
+  h2 {
+      margin-top: 0; /* Elimina el margen superior del elemento h2 */
+      font-size: 20px; /* Establece el tamaño de fuente del h2 a 20 píxeles */
+      color: #333; /* Establece el color del texto a un gris oscuro */
+  }
+    
+  canvas {
+      max-width: 100%; /* Limita el ancho máximo del canvas al 100% del contenedor */
+      height: 250px; /* Establece la altura del canvas a 250 píxeles */
+  }
+    
+  .botones {
+      margin-top: 10px; /* Añade un margen superior de 10 píxeles a los botones */
+  }
+    
+  button {
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor de los botones */
+      padding: 8px 12px; /* Añade un relleno interno de 8 píxeles en la parte superior/inferior y 12 píxeles en los lados */
+      border: none; /* Elimina el borde por defecto del botón */
+      background-color: #125fb1; /* Establece el color de fondo del botón a un azul oscuro */
+      color: white; /* Establece el color del texto del botón a blanco */
+      border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+      cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  }
+    
+  button:hover {
+      background-color: #125fb1 ; /* Mantiene el mismo color de fondo al pasar el ratón sobre el botón */
+  }
+    
+  .edicion {
+      margin-top: 10px; /* Añade un margen superior de 10 píxeles al elemento de edición */
+  }
+    
+  input[type="number4"],
+  input[type="text"] {
+      width: 60px; /* Establece el ancho de los campos de entrada numéricos y de texto a 60 píxeles */
+      padding: 5px; /* Añade un relleno interno de 5 píxeles */
+      text-align: center; /* Centra el texto dentro del campo de entrada */
+      border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+      border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor de los campos de entrada */
+  }
+    
+  input[type="color4"] {
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor del selector de color */
+  }
+  
+
+
+  
+/* Tarjeta 5*/
+.tarjeta5 {
+    width: 300px; /* Establece el ancho de la tarjeta en 300 píxeles */
+    position: absolute; /* Posiciona la tarjeta de manera absoluta en relación con su contenedor */
+    top: 800px; /* Coloca la tarjeta a 120 píxeles desde la parte superior del contenedor */
+    left: 60px; /* Coloca la tarjeta a 50 píxeles desde la izquierda del contenedor */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 8px; /* Aplica un radio de borde de 8 píxeles para esquinas redondeadas */
+    padding: 15px; /* Añade un relleno interno de 15 píxeles alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para dar efecto de profundidad */
+    background-color: #fff; /* Establece el color de fondo de la tarjeta a blanco */
+}
+    
+  
+  h2 {
+      margin-top: 0; /* Elimina el margen superior del elemento h2 */
+      font-size: 20px; /* Establece el tamaño de fuente del h2 a 20 píxeles */
+      color: #333; /* Establece el color del texto a un gris oscuro */
+  }
+    
+  canvas {
+      max-width: 100%; /* Limita el ancho máximo del canvas al 100% del contenedor */
+      height: 250px; /* Establece la altura del canvas a 250 píxeles */
+  }
+    
+  .botones {
+      margin-top: 10px; /* Añade un margen superior de 10 píxeles a los botones */
+  }
+    
+  button {
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor de los botones */
+      padding: 8px 12px; /* Añade un relleno interno de 8 píxeles en la parte superior/inferior y 12 píxeles en los lados */
+      border: none; /* Elimina el borde por defecto del botón */
+      background-color: #125fb1; /* Establece el color de fondo del botón a un azul oscuro */
+      color: white; /* Establece el color del texto del botón a blanco */
+      border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+      cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  }
+    
+  button:hover {
+      background-color: #125fb1 ; /* Mantiene el mismo color de fondo al pasar el ratón sobre el botón */
+  }
+    
+  .edicion {
+      margin-top: 10px; /* Añade un margen superior de 10 píxeles al elemento de edición */
+  }
+    
+  input[type="number5"],
+  input[type="text"] {
+      width: 60px; /* Establece el ancho de los campos de entrada numéricos y de texto a 60 píxeles */
+      padding: 5px; /* Añade un relleno interno de 5 píxeles */
+      text-align: center; /* Centra el texto dentro del campo de entrada */
+      border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+      border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor de los campos de entrada */
+  }
+    
+  input[type="color5"] {
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor del selector de color */
+  }
+  
+
+    
+/* Tarjeta 6*/
+.tarjeta6 {
+    width: 300px; /* Establece el ancho de la segunda tarjeta en 300 píxeles */
+    position: absolute; /* Posiciona la tarjeta de manera absoluta en relación con su contenedor */
+    top: 800px; /* Coloca la tarjeta a -1 píxel desde la parte superior del contenedor */
+    right: 950px; /* Coloca la tarjeta fuera de la vista a la derecha del contenedor */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 8px; /* Aplica un radio de borde de 8 píxeles para esquinas redondeadas */
+    padding: 15px; /* Añade un relleno interno de 15 píxeles alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para dar efecto de profundidad */
+    background-color: #fff; /* Establece el color de fondo de la tarjeta a blanco */
+}
+    
+  
+  h2 {
+      margin-top: 0; /* Elimina el margen superior del elemento h2 */
+      font-size: 20px; /* Establece el tamaño de fuente del h2 a 20 píxeles */
+      color: #333; /* Establece el color del texto a un gris oscuro */
+  }
+    
+  canvas {
+      max-width: 100%; /* Limita el ancho máximo del canvas al 100% del contenedor */
+      height: 250px; /* Establece la altura del canvas a 250 píxeles */
+  }
+    
+  .botones {
+      margin-top: 10px; /* Añade un margen superior de 10 píxeles a los botones */
+  }
+    
+  button {
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor de los botones */
+      padding: 8px 12px; /* Añade un relleno interno de 8 píxeles en la parte superior/inferior y 12 píxeles en los lados */
+      border: none; /* Elimina el borde por defecto del botón */
+      background-color: #125fb1; /* Establece el color de fondo del botón a un azul oscuro */
+      color: white; /* Establece el color del texto del botón a blanco */
+      border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+      cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  }
+    
+  button:hover {
+      background-color: #125fb1 ; /* Mantiene el mismo color de fondo al pasar el ratón sobre el botón */
+  }
+    
+  .edicion {
+      margin-top: 10px; /* Añade un margen superior de 10 píxeles al elemento de edición */
+  }
+    
+  input[type="number6"],
+  input[type="text"] {
+      width: 60px; /* Establece el ancho de los campos de entrada numéricos y de texto a 60 píxeles */
+      padding: 5px; /* Añade un relleno interno de 5 píxeles */
+      text-align: center; /* Centra el texto dentro del campo de entrada */
+      border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+      border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor de los campos de entrada */
+  }
+    
+  input[type="color6"] {
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor del selector de color */
+  }
+
+      
+/* Tarjeta 7*/
+.tarjeta7 {
+  width: 300px; /* Establece el ancho de la tercera tarjeta en 300 píxeles */
+  position: absolute; /* Posiciona la tarjeta de manera absoluta en relación con su contenedor */
+  top: 800px; /* Baja la tarjeta un poco más desde la parte superior del contenedor */
+  left: 57%; /* Coloca la tarjeta en el centro del contenedor */
+  transform: translateX(-50%); /* Ajusta la tarjeta para que quede centrada en la mitad */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+  border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+  border-radius: 8px; /* Aplica un radio de borde de 8 píxeles para esquinas redondeadas */
+  padding: 15px; /* Añade un relleno interno de 15 píxeles alrededor del contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para dar efecto de profundidad */
+  background-color: #fff; /* Establece el color de fondo de la tarjeta a blanco */
+}
+    
+  
+  h2 {
+      margin-top: 0; /* Elimina el margen superior del elemento h2 */
+      font-size: 20px; /* Establece el tamaño de fuente del h2 a 20 píxeles */
+      color: #333; /* Establece el color del texto a un gris oscuro */
+  }
+    
+  canvas {
+      max-width: 100%; /* Limita el ancho máximo del canvas al 100% del contenedor */
+      height: 250px; /* Establece la altura del canvas a 250 píxeles */
+  }
+    
+  .botones {
+      margin-top: 10px; /* Añade un margen superior de 10 píxeles a los botones */
+  }
+    
+  button {
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor de los botones */
+      padding: 8px 12px; /* Añade un relleno interno de 8 píxeles en la parte superior/inferior y 12 píxeles en los lados */
+      border: none; /* Elimina el borde por defecto del botón */
+      background-color: #125fb1; /* Establece el color de fondo del botón a un azul oscuro */
+      color: white; /* Establece el color del texto del botón a blanco */
+      border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+      cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  }
+    
+  button:hover {
+      background-color: #125fb1 ; /* Mantiene el mismo color de fondo al pasar el ratón sobre el botón */
+  }
+    
+  .edicion {
+      margin-top: 10px; /* Añade un margen superior de 10 píxeles al elemento de edición */
+  }
+    
+  input[type="number7"],
+  input[type="text"] {
+      width: 60px; /* Establece el ancho de los campos de entrada numéricos y de texto a 60 píxeles */
+      padding: 5px; /* Añade un relleno interno de 5 píxeles */
+      text-align: center; /* Centra el texto dentro del campo de entrada */
+      border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+      border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor de los campos de entrada */
+  }
+    
+  input[type="color7"] {
+      margin: 5px; /* Añade un margen de 5 píxeles alrededor del selector de color */
+  }
+
+  /* Tarjeta 7*/
+.tarjeta8 {
+    width: 300px; /* Establece el ancho de la tarjeta en 300 píxeles */
+    position: absolute; /* Posiciona la tarjeta de manera absoluta en relación con su contenedor */
+    top: 800px; /* Coloca la tarjeta a 120 píxeles desde la parte superior del contenedor */
+    left: 71%;  ; /* Coloca la tarjeta a 50 píxeles desde la izquierda del contenedor */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+    border-radius: 8px; /* Aplica un radio de borde de 8 píxeles para esquinas redondeadas */
+    padding: 15px; /* Añade un relleno interno de 15 píxeles alrededor del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para dar efecto de profundidad */
+    background-color: #fff; /* Establece el color de fondo de la tarjeta a blanco */    
+  }
+      
+    
+    h2 {
+        margin-top: 0; /* Elimina el margen superior del elemento h2 */
+        font-size: 20px; /* Establece el tamaño de fuente del h2 a 20 píxeles */
+        color: #333; /* Establece el color del texto a un gris oscuro */
+    }
+      
+    canvas {
+        max-width: 100%; /* Limita el ancho máximo del canvas al 100% del contenedor */
+        height: 250px; /* Establece la altura del canvas a 250 píxeles */
+    }
+      
+    .botones {
+        margin-top: 10px; /* Añade un margen superior de 10 píxeles a los botones */
+    }
+      
+    button {
+        margin: 5px; /* Añade un margen de 5 píxeles alrededor de los botones */
+        padding: 8px 12px; /* Añade un relleno interno de 8 píxeles en la parte superior/inferior y 12 píxeles en los lados */
+        border: none; /* Elimina el borde por defecto del botón */
+        background-color: #125fb1; /* Establece el color de fondo del botón a un azul oscuro */
+        color: white; /* Establece el color del texto del botón a blanco */
+        border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+        cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    }
+      
+    button:hover {
+        background-color: #125fb1 ; /* Mantiene el mismo color de fondo al pasar el ratón sobre el botón */
+    }
+      
+    .edicion {
+        margin-top: 10px; /* Añade un margen superior de 10 píxeles al elemento de edición */
+    }
+      
+    input[type="number8"],
+    input[type="text"] {
+        width: 60px; /* Establece el ancho de los campos de entrada numéricos y de texto a 60 píxeles */
+        padding: 5px; /* Añade un relleno interno de 5 píxeles */
+        text-align: center; /* Centra el texto dentro del campo de entrada */
+        border: 1px solid #ddd; /* Añade un borde de 1 píxel con un color gris claro */
+        border-radius: 4px; /* Aplica un radio de borde de 4 píxeles para esquinas redondeadas */
+        margin: 5px; /* Añade un margen de 5 píxeles alrededor de los campos de entrada */
+    }
+      
+    input[type="color8"] {
+        margin: 5px; /* Añade un margen de 5 píxeles alrededor del selector de color */
+    }

@@ -1,0 +1,291 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="en"> <!-- Establece el idioma del documento como inglés -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea adaptable a pantallas móviles -->
+    <title>Perfil</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Incluye la librería CSS de Tailwind para estilos rápidos -->
+    <style>
+        /* Estilo para ocultar las tarjetas que no coinciden con la búsqueda */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 min-h-screen"> <!-- Define el fondo blanco o gris oscuro para modo oscuro y ocupa toda la pantalla -->
+
+    <section class="flex flex-col items-center justify-center min-h-screen p-6"> 
+        <!-- Sección centrada vertical y horizontalmente, con relleno (padding) -->
+
+        <a href="#" class="absolute top-4 left-4"> 
+            <!-- Enlace absoluto en la esquina superior izquierda -->
+            <img src="Precredit.png" alt="Logo" class="w-24 sm:w-36"> 
+            <!-- Imagen del logo con diferentes tamaños según la pantalla -->
+        </a>
+
+        <div class="absolute top-4 right-4"> 
+            <!-- Contenedor con posición absoluta en la esquina superior derecha -->
+            <button (click)="redirigir()" type="button" 
+                class="text-blue-600 inline-flex items-center justify-center border border-blue-600 
+                       hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none 
+                       focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                <!-- Botón estilizado con Tailwind, azul con hover e interacción en foco -->
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                     fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                          stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                    <!-- Icono de flecha para regresar, con estilo y trazos redondeados -->
+                </svg>
+                Regresar <!-- Texto del botón -->
+            </button>
+        </div>
+
+        <br><br><br> <!-- Espacios adicionales -->
+
+        <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-8"> 
+            <!-- Sección con fondo adaptable al modo oscuro y márgenes verticales -->
+            <div class="mx-auto max-w-screen-xl px-4 2xl:px-0"> 
+                <!-- Contenedor centrado, con ancho máximo para pantallas grandes -->
+                <div class="mx-auto max-w-5xl"> 
+                    <!-- Contenedor con un ancho máximo de 5xl -->
+                    <div class="gap-4 sm:flex sm:items-center sm:justify-between"> 
+                        <!-- Contenedor flexible con espacio entre elementos en pantallas pequeñas -->
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
+                            Herramientas
+                        </h2> <!-- Título con tamaño adaptable al modo oscuro -->
+                    </div>
+                    <br> <!-- Espacio adicional -->
+                    <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800"> 
+                        <!-- Tarjeta con sombra, bordes redondeados y fondo adaptable -->
+                         <!-- Tarjetas adicionales de Azure Devops -->
+                         <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800">
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="Icono de Azure.png" alt="Azure" class="w-40 h-auto mr-4">
+                                </a>
+                                <dl class="flex-grow">
+                                    <dd class="text-base font-semibold text-gray-900 dark:text-white">
+                                        <a href="#" class="hover:underline">Azure DevOps</a>
+                                    </dd>
+                                    <dd class="text-gray-500 dark:text-gray-400 text-justify">
+                                        Azure DevOps es un conjunto de servicios para desarrollar y entregar software, facilitando la colaboración en equipo y la integración continua.
+                                    </dd>
+                                </dl>
+                                <div class="ml-4">
+                                    <a href="https://azure.microsoft.com/es-es/services/devops/" 
+                                       target="_blank" rel="noopener noreferrer">
+                                        <button type="button" class="text-blue-600 inline-flex items-center justify-center 
+                                                border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 
+                                                focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm 
+                                                px-5 py-2.5">
+                                            Ir
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!--Tarjeta de Clockify-->
+                        <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800">
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="Icono de Clockify.png" alt="Azure" class="w-40 h-auto mr-4">
+                                </a>
+                                <dl class="flex-grow">
+                                    <dd class="text-base font-semibold text-gray-900 dark:text-white">
+                                        <a href="#" class="hover:underline">Clockify</a>
+                                    </dd>
+                                    <dd class="text-gray-500 dark:text-gray-400 text-justify">
+                                        Clockify es una herramienta gratuita para registrar y gestionar el tiempo de trabajo, ideal para medir la productividad y administrar proyectos.                                </dl>
+                                <div class="ml-4">
+                                    <a href="https://clockify.me/es/" 
+                                       target="_blank" rel="noopener noreferrer">
+                                        <button type="button" class="text-blue-600 inline-flex items-center justify-center 
+                                                border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 
+                                                focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm 
+                                                px-5 py-2.5">
+                                            Ir
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                         <!--Tarjeta de figma-->
+                        <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800"> 
+                            <div class="flex items-center"> 
+                                <!-- Contenedor alineado con flexbox -->
+                                <a href="#"> 
+                                    <!-- Enlace vacío alrededor de la imagen -->
+                                    <img src="Icono de figma.png" alt="Cronograma" class="w-40 h-auto mr-4">
+                                    <!-- Imagen de Figma con tamaño fijo y margen derecho -->
+                                </a>
+                                <dl class="flex-grow"> 
+                                    <!-- Lista de definiciones ocupando todo el espacio disponible -->
+                                    <dd class="text-base font-semibold text-gray-900 dark:text-white">
+                                        <a href="#" class="hover:underline">Figma</a>
+                                    </dd> <!-- Título con enlace a Figma -->
+                                    <dd class="text-gray-500 dark:text-gray-400 text-justify">
+                                        Figma es una herramienta de diseño colaborativo en la nube que permite a equipos crear y compartir interfaces de usuario en tiempo real.
+                                    </dd> <!-- Descripción sobre Figma -->
+                                </dl>
+
+                                <div class="ml-4"> 
+                                    <!-- Contenedor con margen izquierdo -->
+                                    <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
+                                        <button type="button" 
+                                            class="text-blue-600 inline-flex items-center justify-center border 
+                                                   border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 
+                                                   focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
+                                                   text-sm px-5 py-2.5">
+                                            Ir <!-- Botón que lleva a la página de Figma -->
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br> <!-- Espacio adicional -->
+                         <!--Tarjeta de FormateadorXML-->
+                         <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800">
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="Icono de For.png" alt="Azure" class="w-40 h-auto mr-4">
+                                </a>
+                                <dl class="flex-grow">
+                                    <dd class="text-base font-semibold text-gray-900 dark:text-white">
+                                        <a href="#" class="hover:underline">FormateadorXLM</a>
+                                    </dd>
+                                    <dd class="text-gray-500 dark:text-gray-400 text-justify">
+                                        ManageEngine Site24x7 es una herramienta en la nube que monitorea el rendimiento de aplicaciones, servidores y sitios web.                                     </dl>
+                                <div class="ml-4">
+                                    <a href="https://www.site24x7.com/es/tools/xml-formateador.html" 
+                                       target="_blank" rel="noopener noreferrer">
+                                        <button type="button" class="text-blue-600 inline-flex items-center justify-center 
+                                                border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 
+                                                focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm 
+                                                px-5 py-2.5">
+                                            Ir
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                         <!--Tarjeta de GuateCompras-->
+                         <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800">
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="Icono de Guate.png" alt="Azure" class="w-40 h-auto mr-4">
+                                </a>
+                                <dl class="flex-grow">
+                                    <dd class="text-base font-semibold text-gray-900 dark:text-white">
+                                        <a href="#" class="hover:underline">GuateCompras</a>
+                                    </dd>
+                                    <dd class="text-gray-500 dark:text-gray-400 text-justify">
+                                        Guatecompras es una plataforma en línea que facilita la compra y venta de productos y servicios en Guatemala, promoviendo el comercio local.
+                                     </dl>
+                                <div class="ml-4">
+                                    <a href="https://www.guatecompras.gt/proveedores/busquedaProvee.aspx" 
+                                       target="_blank" rel="noopener noreferrer">
+                                        <button type="button" class="text-blue-600 inline-flex items-center justify-center 
+                                                border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 
+                                                focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm 
+                                                px-5 py-2.5">
+                                            Ir
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Tarjetas adicionales para otras JONS -->
+                        <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800">
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="Icono de JONS.png" alt="Cronograma" class="w-40 h-auto mr-4">
+                                </a>
+                                <dl class="flex-grow">
+                                    <dd class="text-base font-semibold text-gray-900 dark:text-white">
+                                        <a href="#" class="hover:underline">JSON</a>
+                                    </dd>
+                                    <dd class="text-gray-500 dark:text-gray-400 text-justify">
+                                        JONS es un editor en línea para crear y validar documentos JSON, ofreciendo herramientas para facilitar la edición y análisis de datos.                                    </dd>
+                                </dl>
+                                <div class="ml-4">
+                                    <a href="https://jsoneditoronline.org/#left=local.hawefe&right=local.cewuyo" 
+                                       target="_blank" rel="noopener noreferrer">
+                                        <button type="button" class="text-blue-600 inline-flex items-center justify-center 
+                                                border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 
+                                                focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm 
+                                                px-5 py-2.5">
+                                            Ir
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br> <!-- Espacio adicional -->
+                        <br> <!-- Espacio adicional -->
+                        <!--Tarjeta de TempMail-->
+                        <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800">
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="Icono de Sat.png" alt="Azure" class="w-40 h-auto mr-4">
+                                </a>
+                                <dl class="flex-grow">
+                                    <dd class="text-base font-semibold text-gray-900 dark:text-white">
+                                        <a href="#" class="hover:underline">SAT</a>
+                                    </dd>
+                                    <dd class="text-gray-500 dark:text-gray-400 text-justify">
+                                        La SAT de Guatemala permite buscar y verificar NIT (Número de Identificación Tributaria). </dl>
+                                <div class="ml-4">
+                                    <a href="https://portal.sat.gob.gt/portal/consulta-cui-nit/" 
+                                       target="_blank" rel="noopener noreferrer">
+                                        <button type="button" class="text-blue-600 inline-flex items-center justify-center  
+                                                border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 
+                                                focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm 
+                                                px-5 py-2.5">
+                                            Ir
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Tarjetas adicionales de Azure Devops -->
+                        <div class="bg-white rounded-lg p-4 shadow-md dark:bg-gray-800">
+                            <div class="flex items-center">
+                                <a href="#">
+                                    <img src="Icono de Temp.png" alt="Azure" class="w-40 h-auto mr-4">
+                                </a>
+                                <dl class="flex-grow">
+                                    <dd class="text-base font-semibold text-gray-900 dark:text-white">
+                                        <a href="#" class="hover:underline">TempMail</a>
+                                    </dd>
+                                    <dd class="text-gray-500 dark:text-gray-400 text-justify">
+                                        Temp Mail ofrece correos electrónicos temporales y desechables para recibir mensajes sin revelar tu dirección real, ideal para evitar spam.                                </dl>
+                                <div class="ml-4">
+                                    <a href="https://temp-mail.org/es/" 
+                                       target="_blank" rel="noopener noreferrer">
+                                        <button type="button" class="text-blue-600 inline-flex items-center justify-center 
+                                                border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 
+                                                focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm 
+                                                px-5 py-2.5">
+                                            Ir
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
